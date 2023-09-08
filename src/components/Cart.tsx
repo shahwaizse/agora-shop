@@ -1,6 +1,6 @@
 import CartCard from "./CartCard";
 
-export default function Cart(props:{cart:[{id:number, title:string, price:number, image:string, amount:number}], total:number}) {
+export default function Cart(props:{cart:{id:number, title:string, price:number, image:string, amount:number}[], total:number}) {
     return (
         props.cart[0].id == 0 ? <div className=" text-black text-center text-lg mt-80 pt-10 font-mono">No Items In Cart.</div> :
         <div className="flex flex-col">

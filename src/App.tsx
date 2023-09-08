@@ -24,7 +24,7 @@ export default function App() {
     }
     else {
       cart.map((item) => {
-        setTotal(total + item.price);
+        setTotal(total + ((item.price * item.amount)));
       });
     }
   }, [cart]);

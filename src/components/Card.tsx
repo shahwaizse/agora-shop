@@ -13,8 +13,11 @@ export default function Card(props: CardProps) {
     function addItem() {
         props.updateCart(props.id,props.title,props.price,props.image,amount);
     }
-    function amountChange(e) {
-        setAmount(e.target.value);
+    function amountChange(e:React.ChangeEvent<HTMLInputElement>) {
+        const parsedInput = parseInt(e.target.value);
+        if(!isNaN(parsedInput)) {
+            setAmount(parsedInput);
+        }
     }
     const [amount, setAmount] = useState(0);
     return(

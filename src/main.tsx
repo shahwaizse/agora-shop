@@ -18,11 +18,11 @@ const router = createBrowserRouter([
       },
       {
         path: "shop",
-        element: <Shop></Shop>,
+        element: <Shop updateCart={() => {}}></Shop>,
       },
       {
         path: "cart",
-        element: <Cart></Cart>,
+        element: <Cart cart={[]} total={0}></Cart>,
       },
     ],
   },
