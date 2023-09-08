@@ -21,7 +21,7 @@ export default function Card(props: CardProps) {
     }
     const [amount, setAmount] = useState(0);
     return(
-        <div className="text-black p-5 w-80 rounded-xl m-7 shadow-md bg-white">
+        <div className="text-black p-5 w-80 rounded-xl m-5 shadow-md bg-white">
             <div className="h-52 w-auto overflow-hidden">
                 <img src={props.image} alt="" />
             </div>
