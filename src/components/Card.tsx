@@ -7,11 +7,13 @@ interface CardProps {
     price:number;
     image:string;
     updateCart: (id:number,title:string,price:number,image:string,amount:number) => void;
+    setPopup: (popupState: boolean) => void;
 }
 
 export default function Card(props: CardProps) {
     function addItem() {
         props.updateCart(props.id,props.title,props.price,props.image,amount);
+        props.setPopup(true);
     }
     function amountChange(e:React.ChangeEvent<HTMLInputElement>) {
         const parsedInput = parseInt(e.target.value);
